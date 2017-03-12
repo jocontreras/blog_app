@@ -1,6 +1,6 @@
 Given(/^I am on the "([^"]*)" page$/) do |page|
   article = Article.find_by(title: page)
-  visit article_path(article[:id])
+  visit article_path(article: [:id])
 end
 
 Then(/^I should see the "([^"]*)" button$/) do |comment|
