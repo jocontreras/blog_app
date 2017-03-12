@@ -1,4 +1,4 @@
-<h1>Listing articles</h1>
+<h1>List of articles</h1>
 
 <table>
   <tr>
@@ -10,9 +10,7 @@
     <tr>
       <td><%= article.title %></td>
       <td><%= article.content %></td>
+      <td><%= link_to 'Show', article_path(article) %></td>
     </tr>
   <% end %>
-
-  <%= link_to 'My Articles', controller: 'articles' %>
-
 </table>

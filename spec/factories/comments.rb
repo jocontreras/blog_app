@@ -1,7 +1,6 @@
 FactoryGirl.define do
   factory :comment do
-    commenter "MyString"
     body "MyText"
-    article nil
+    article_id 1
   end
 end
