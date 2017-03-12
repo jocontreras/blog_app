@@ -18,3 +18,7 @@ end
 Then(/^I should be on the "([^"]*)"$/) do |content|
   expect(page).to have_contet content
 end
+
+When(/^I fill in "([^"]*)" with "([^"]*)"$/) do |email, content|
+  fill_in "comment_email", with: content
+end
