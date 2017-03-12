@@ -17,11 +17,26 @@ RSpec.describe Comment, type: :model do
     it { should belong_to :article}
   end
 
-  describe 'Factory' do
-    it 'should have valid Factory' do
-      expect(FactoryGirl.create(:article)).to be_valid
+  describe 'Factory Application' do
+    it 'should have valid Factory format' do
+      expect(FactoryGirl.create(:comment, article_id: @factory_article.id)).to be_valid
+    end
+
+    it 'should have a valid Factory with email format' do
+      expect(FactoryGirl.create(:comment, article_id: @factory_article.id, email: 'jen.almarasy@gmail.com')).to be_valid
     end
   end
+
+=begin
+  describe 'Email Validation' do
+  it 'email with invalid format is invalid' do
+      user = Comment.new(email: 'jen.almarasygmail.com', )
+      user.save
+      #expect(user.errors[:email]).to eq(['is invalid'])
+      expect(user.errors.get(:email)).to eq(['is invalid'])
+    end
+  end
+=end
 
 
 end
