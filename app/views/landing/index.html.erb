@@ -1,9 +1,9 @@
-<h1>Listing articles</h1>
+<h1>Summary of articles</h1>
 
 <table>
   <tr>
-    <th>Title</th>
-    <th>Content</th>
+    <th width = "200">Title</th>
+    <th width = "150">Content</th>
   </tr>
 
   <% @articles.each do |article| %>
@@ -12,7 +12,9 @@
       <td><%= article.content %></td>
     </tr>
   <% end %>
-
-  <%= link_to 'My Articles', controller: 'articles' %>
-
 </table>
+
+<br />
+<div>
+    <%= link_to 'Click here to write your comments!', controller: 'articles' %>
+</div>
