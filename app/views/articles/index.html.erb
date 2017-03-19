@@ -4,12 +4,14 @@
   <tr>
     <th width = "150">Title</th>
     <th width = "250">Content</th>
+    <th width = "150">Author</th>
   </tr>
 
   <% @articles.each do |article| %>
     <tr>
       <td><%= article.title %></td>
       <td><%= article.content %></td>
+      <td>Written by <%= article.author %> at <%= article.created_at.strftime('%F') %></td> 
       <td><%= link_to 'Show', article_path(article) %></td>
     </tr>
   <% end %>
