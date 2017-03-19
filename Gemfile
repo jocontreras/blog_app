@@ -20,6 +20,7 @@ gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 gem 'foundation-rails'
+gem 'validates_email_format_of'
 
 group :development, :test do
   gem 'pry'
