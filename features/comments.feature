@@ -1,6 +1,7 @@
-Feature: As a visitor
-In order to express my views or opinions
-I should be able to comment on articles
+Feature: Viewing of Comments
+  As a visitor
+  In order to express my views or opinions
+  I should be able to comment on articles
 
 Background:
   Given the following articles exists
