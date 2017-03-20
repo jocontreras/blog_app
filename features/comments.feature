@@ -5,9 +5,9 @@ Feature: Viewing of Comments
 
 Background:
   Given the following articles exists
-  | title                | content                            |
-  | A breaking news item | Some really breaking action        |
-  | Learn Rails 5        | Build awesome rails applications   |
+  | title                | content                            | author  |
+  | A breaking news item | Some really breaking action        | Thomas  |
+  | Learn Rails 5        | Build awesome rails applications   | Amber   |
 
   Scenario: Writing and viewing Comment
     Given I am on the "A breaking news item" page

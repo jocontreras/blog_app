@@ -10,8 +10,7 @@ Background:
   | Learn Rails 5        | Build awesome rails applications   | Amber   |
 
 Scenario: Viewing list of articles created by an author
-  Given I am in a lading page
-  Then I should see "Author"
-  And I should click "Thomas" link
-  Then I should see "A breaking news item"
-  And I should see "Some really breaking action"
+  When I am on the landing page
+  Then I should see "Click here to view articles by author"
+  And I click the "Click here to view articles by author" link
+  Then I should see "Search"
