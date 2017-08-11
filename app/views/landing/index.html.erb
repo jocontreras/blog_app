@@ -1,8 +1,22 @@
-<ul>
+<h1>Summary of articles</h1>
+
+<table>
+  <tr>
+    <th width = "200">Title</th>
+    <th width = "250">Content</th>
+    <th width = "250">Author</th>
+  </tr>
+
   <% @articles.each do |article| %>
-    <li>
-      <%= article.title %><br />
-      <%= article.content %>
-    </li>
+    <tr>
+      <td><%= article.title %></td>
+      <td><%= article.content %></td>
+      <td>Written by <%= article.author %> at <%= article.created_at.strftime('%Y-%m-%d') %></td>
+    </tr>
   <% end %>
-</ul>
+</table>
+
+<br />
+
+  <%= link_to 'Click here to write your comments!', controller: 'articles' %><br />
+ <%= link_to 'Click here to view articles by author', author_path %>
