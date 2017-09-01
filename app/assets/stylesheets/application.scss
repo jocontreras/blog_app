@@ -10,13 +10,15 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
- *= require_self
  */
 
- body{
-  padding-top: 25px;
-  margin-left: 50px;
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+$color-primary: RGB(246,238,186); //#343641  shadow- #6abfa5
+
+body{
+  background-color: $color-primary;
 }
 
 h1{
@@ -28,4 +30,34 @@ h1{
    padding: 10px;
    border: 5px solid gray;
    margin: 0;
+}
+
+//nav_bar
+.navbar-inverse {
+    background-color: #f6eeba;
+    border-color: #6abfa5;
+}
+
+.navbar-brand {
+    float: left;
+    height: 80px;
+    width: 30
+    250px;
+    padding: 5px 5px;
+    line-height: 20px;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #F39C12;
+}
+.navbar-inverse .navbar-nav > li > a:hover {
+   background-color: #009688;
+}
+
+.btn-default {
+    color: #333;
+    background-color: #009688;
+    border-color: #009688;
+    border-radius:0px;
+    color:#fff;
 }
