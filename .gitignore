@@ -8,6 +8,7 @@
 /.bundle
 
 
+
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
@@ -18,3 +19,4 @@
 .byebug_history
 
 /vendor
+/.DS_Store
