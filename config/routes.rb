@@ -5,6 +5,6 @@ Rails.application.routes.draw do
 
   get "/author", to: "author#show", as: "author"
 
-  root controller: :landing, action: :index
+  root 'articles#index'
 
 end
