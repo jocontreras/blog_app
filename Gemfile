@@ -12,6 +12,9 @@ gem 'turbolinks', '~> 5'
 gem 'validates_email_format_of'
 gem 'simple_form', '~> 3.5'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
+gem 'ckeditor', '~> 4.1'
+gem 'carrierwave'
+gem 'mini_magick'
 
 group :development, :test do
   gem 'pry'

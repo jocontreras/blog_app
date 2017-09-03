@@ -1,52 +1,5 @@
-<div class = box>
-  <p>
-    <strong>Title:</strong>
-    <%= @article.title %>
-  </p>
-
-  <p>
-    <strong>Content:</strong>
-    <%= @article.content %>
-  </p>
-  <p>
-    <strong>Written by:</strong>
-    <%= @article.author %>
-  </p>
+<div class="col-sm-11 col-xs-12 blog-content">
+  <h2 class="text-center"><%= @article.title %></h2>
+  <h5 class="text-center"><%= @article.created_at.strftime('%b %d, %Y') %></h5>
+  <div><%= raw @article.content %></div>
 </div>
-
-
-<h3>Comments:</h3>
-<% @article.comments.each do |comment| %>
-  <p>
-    <strong>Email:</strong>
-    <%= comment.email %>
-  </p>
-  <p>
-    <strong>Comment:</strong>
-    <%= comment.body %>
-  </p>
-<% end %>
-
-
-<h2>Add a comment:</h2>
-<div class = box>
-
-<%= form_for([@article, @article.comments.build]) do |f| %>
-  <p>
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
-  </p>
-  <p>
-    <%= f.label :body %><br>
-    <%= f.text_area :body %>
-  </p>
-  <p>
-    <%= f.submit %>
-  </p>
-</div>
-<% end %>
-
-<div>
-
-
-<%= link_to 'Back', articles_path %>

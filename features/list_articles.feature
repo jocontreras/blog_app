@@ -12,4 +12,4 @@ Feature: List articles on landing page
         When I am on the landing page
         Then I should see "A breaking news item"
         And I should see "Some really breaking action"
-        And I should see "Thomas"
+        And I should see "Jennifer"
