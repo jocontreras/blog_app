@@ -1,18 +1,21 @@
-<h1>List of articles</h1>
-
-<table>
-  <tr>
-    <th width = "150">Title</th>
-    <th width = "250">Content</th>
-    <th width = "250">Author</th>
-  </tr>
-
-  <% @articles.each do |article| %>
-    <tr>
-      <td><%= article.title %></td>
-      <td><%= article.content %></td>
-      <td>Written by <%= article.author %> at <%= article.created_at.strftime('%F') %></td>
-      <td><%= link_to 'Show', article_path(article) %></td>
-    </tr>
-  <% end %>
-</table>
+<div class = "container">
+  <h1>List of articles</h1>
+  <div class = "col-sm-10 col-sm-offset-1 col-xs-12">
+    <% @articles.each do |article| %>
+    <div class = "col-xs-12 text-center">
+      <div class = "text-center">
+        <h2><%= article.title %></h2>
+        <h6><%= article.created_at.strftime('%b %d, %Y') %></h6>
+        <h6>by: <%= article.author %></h6>
+      </div>
+      <div>
+        <%= raw(article.content).truncate(358) %>
+      </div>
+      <div class="text-center">
+        <%= link_to "READ MORE", article_path(article) %>
+      </div>
+      <br>
+    </div>
+    <% end %>
+  </div>
+</div>
